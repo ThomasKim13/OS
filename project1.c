@@ -4,7 +4,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <time.h>
-//Syscall constats that will be used later on
+//Syscall constants that will be used later on
 #define MY_QUEUE_ENQUEUE 335
 #define MY_QUEUE_DEQUEUE 336
 
@@ -19,7 +19,8 @@ int main() {
 
     // Enqueue three random values
     for (int i = 0; i < 3; ++i) {
-        int value = generate_random_number(1, 100); // Generating a random number between 1 and 100
+        int value = generate_random_number(1, 100); // Generating a random number between 1 and 100)
+        //added for debugging purposes
         if (syscall(MY_QUEUE_ENQUEUE, value) == -1) {
             perror("Error enqueuing value");
             return 1;
@@ -30,6 +31,7 @@ int main() {
     // Dequeue three values
     for (int i = 0; i < 3; ++i) {
         int value = syscall(MY_QUEUE_DEQUEUE);
+        //Added for debugging purposes
         if (value == -1) {
             perror("Error dequeuing value");
             return 1;
