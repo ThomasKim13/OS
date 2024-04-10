@@ -4,7 +4,7 @@
 #include <errno.h>
 #include <stdlib.h>
 #include <time.h>
-
+//Syscall constats that will be used later on
 #define MY_QUEUE_ENQUEUE 335
 #define MY_QUEUE_DEQUEUE 336
 
