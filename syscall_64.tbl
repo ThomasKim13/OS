@@ -345,8 +345,10 @@
 334	common	rseq			__x64_sys_rseq
 
 # sslab --- start
-335	common	os2024_enqueue		__x64_sys_os2024_enqueue
-336	common	os2024_dequeue		__x64_sys_os2024_dequeue
+
+337	common	ku_cpu_request		sys_ku_cpu_request
+
+338	common	set_scheduling_polic	 sys_set_scheduling_policy
 #sslab --- end
 #
 # x32-specific system call numbers start at 512 to avoid cache impact
