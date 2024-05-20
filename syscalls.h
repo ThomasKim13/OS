@@ -1297,4 +1297,8 @@ static inline unsigned int ksys_personality(unsigned int personality)
 }
 asmlinkage int sys_os2024_enqueue(int);
 asmlinkage int sys_os2024_dequeue(void);
+
+
+asmlinkage long sys_ku_cpu_request(pid_t pid, int exec_time, int start_delay, int priority);
+asmlinkage long sys_set_scheduling_policy(int policy);
 #endif
